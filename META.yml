@@ -1,0 +1,17 @@
+# http://module-build.sourceforge.net/META-spec.html
+#XXXXXXX This is a prototype!!!  It will change in the future!!! XXXXX#
+name:         DateTime-Event-Jewish
+version:      0.01
+version_from: lib/DateTime/Event/Jewish.pm
+installdirs:  site
+requires:
+    DateTime:                      0
+    DateTime::Calendar::Hebrew:    0.04
+    DateTime::Duration:            0
+    DateTime::Locale:              0.4
+    Math::Trig:                    0
+    Param::Validate:               0
+    Test::More:                    0
+
+distribution_type: module
+generated_by: ExtUtils::MakeMaker version 6.30
