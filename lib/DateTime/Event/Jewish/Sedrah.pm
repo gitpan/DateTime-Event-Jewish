@@ -83,7 +83,7 @@ factored ot so that it can easily be used in other modules.
 
 =head1 AUTHOR
 
-Raphael Mankin, C<< <raph+cpan at mankin.org.uk> >>
+Raphael Mankin, C<< <rapmankin at cpan.org> >>
 
 =head1 BUGS
 

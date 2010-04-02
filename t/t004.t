@@ -9,6 +9,8 @@ sample001.pl	- How to use this module
 Check that the Shabbat before Rosh HaShanah is Nitzavim (or
 Nitzavim/Vayelech).
 
+This variant is for Israel.
+
 =cut
 
 use strict;

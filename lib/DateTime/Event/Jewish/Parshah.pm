@@ -1,4 +1,25 @@
 package DateTime::Event::Jewish::Parshah;
+
+=head1 NAME
+
+DateTime::Event::Jewish::Parshah - Calculate leyning for next
+shabbat
+
+=head1 SYNOPSIS
+
+ use DateTime::Event::Jewish::Parshah qw(parshah);
+
+ my $parshah	= parshah(DateTime->today, $israel);
+
+=head1 DESCRIPTION
+
+Returns either a parshah name or a yom tov name for the Shabbat
+after the date supplied. The optional I<israel> flag specifies
+whether to calculate the leyning for Israel or for the diaspora.
+
+
+=cut
+
 use strict;
 use warnings;
 use DateTime;
@@ -217,7 +238,7 @@ In particular, none of the arithmetic works.
 
 =head1 AUTHOR
 
-Raphael Mankin, C<< <raph+cpan at mankin.org.uk> >>
+Raphael Mankin, C<< <rapmankin at cpan.org> >>
 
 =head1 BUGS
 

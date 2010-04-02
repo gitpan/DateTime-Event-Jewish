@@ -9,11 +9,11 @@ DateTime::Event::Jewish - Claculate leyning and Shabbat times
 
 =head1 VERSION
 
-Version 0.01
+Version 0.02
 
 =cut
 
-our $VERSION = '0.01';
+our $VERSION = '0.03';
 
 
 =head1 SYNOPSIS
@@ -36,7 +36,7 @@ information.
 
 =head1 AUTHOR
 
-Raphael Mankin, C<< <raph+cpan at mankin.org.uk> >>
+Raphael Mankin, C<< <rapmankin at cpan.org> >>
 
 =head1 BUGS
 

@@ -10,6 +10,8 @@ Check that the Shabbat before Tisha b'Av is Devarim. If 9 Av is
 a Shabbat then Devarim is read on 9th Av, and Tisha b'Av is on
 Sunday 10 Av.
 
+This variant is for outside Israel.
+
 =cut
 
 use strict;

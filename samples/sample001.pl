@@ -28,6 +28,7 @@ use DateTime::Event::Jewish::Sunrise qw(@months);
 	'London' => [[51, 34, 57], [0,-13,-28], 'Europe/London'], # Actually, Hendon Central
 	'Jerusalem' => [[31, 47, 00], [35, 13,0], 'Asia/Jerusalem'],
 	'State College' => [[40,47,29],[-77, -51, -31], 'America/New_York'],
+	'Vancouver, BC' => [[49,16,0], [-123,-7,0], 'America/Vancouver'],
     );
 
 

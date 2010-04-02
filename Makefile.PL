@@ -4,7 +4,7 @@ use ExtUtils::MakeMaker;
 
 WriteMakefile(
     NAME                => 'DateTime::Event::Jewish',
-    AUTHOR              => q{Raphael Mankin <raph+cpan@mankin.org.uk>},
+    AUTHOR              => q{Raphael Mankin <rapmankin@cpan.org>},
     VERSION_FROM        => 'lib/DateTime/Event/Jewish.pm',
     ABSTRACT_FROM       => 'lib/DateTime/Event/Jewish.pm',
     ($ExtUtils::MakeMaker::VERSION >= 6.3002

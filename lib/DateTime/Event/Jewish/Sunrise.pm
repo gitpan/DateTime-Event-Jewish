@@ -36,9 +36,9 @@ my $night	= $jerusalem->motzeiShabbat($date);
 
 This module assumes that the earth is a smooth sphere. No
 allowance is made for atmospheric refraction or diffraction of
-light passing close to the earth's surface. to allow for
-refraction add 0.833 degrees tow hatever solar depression you
-are using e.g. change 1deg to 1.833deg.
+light passing close to the earth's surface. To allow for
+refraction one uses a depression of 0.833 degrees (50' arc). As,
+by default, we use 1 degree of depression this is more than adequate.
 
 The methods that return times actually return a DateTime
 object in the correct timezone as specified in the constructor. 
@@ -50,7 +50,7 @@ If you call this module for a high latitude in the height of
 summer or the depth of winter it will return nonsense. Ask a silly
 question and you will get a very silly answer.
 
-Calculation are done using the spherical cosine rule.
+Calculations are done using the spherical cosine rule.
 
 =head3 new($latitude, $longitude, $timeZone)
 
@@ -159,6 +159,7 @@ sub localnoon {
     # Extract the longitude so that we can do the correct shift
     my $longref	= $self->{long};
     my $long	= $longref->[0] + $longref->[1]/60.0 + $longref->[2]/3600.0;
+    $date->set_time_zone("UTC");
     $date->set_hour(12);
     $date->set_minute(0);
     $date->set_second(0);
@@ -433,7 +434,7 @@ sub recalculate_coordinate {
 
 =head1 AUTHOR
 
-Raphael Mankin, C<< <raph+cpan at mankin.org.uk> >>
+Raphael Mankin, C<< <rapmankin at cpan.org> >>
 
 =head1 BUGS
 

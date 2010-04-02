@@ -61,7 +61,7 @@ chanukkah, 10 Tevet etc. are not in the list.
 
 =head1 AUTHOR
 
-Raphael Mankin, C<< <raph+cpan at mankin.org.uk> >>
+Raphael Mankin, C<< <rapmankin at cpan.org> >>
 
 =head1 BUGS
 
