@@ -1,4 +1,3 @@
-#!perl  -T
 
 =head1 NAME
 
@@ -18,7 +17,7 @@ use strict;
 use warnings;
 use Test::More tests => 30;
 use FindBin qw($Bin);
-use lib qw($Bin/../lib);
+use lib qq($Bin/../lib);
 
 
 use DateTime;

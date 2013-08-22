@@ -17,7 +17,7 @@ WriteMakefile(
 	'DateTime::Duration'	=> 0,
 	'DateTime::Calendar::Hebrew'	=> '0.04',
 	'Math::Trig'	=> 0,
-	'Param::Validate'	=> 0,
+	'Params::Validate'	=> 0,
 	'DateTime::Locale'	=> '0.4',
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },

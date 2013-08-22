@@ -7,7 +7,7 @@ sample001.pl	- How to use this module
 =head1 DESCRIPTION
 
 This is a sample program that prints out a full-year timetable,
-at 3-day intervals, for three places in the world.
+at 3-day intervals, for four places in the world.
 
 =cut
 
@@ -25,10 +25,11 @@ use DateTime::Event::Jewish::Sunrise qw(@months);
 
     # The fields are: latitude, longitude, timezone
     my %places= (
-	'London' => [[51, 34, 57], [0,-13,-28], 'Europe/London'], # Actually, Hendon Central
-	'Jerusalem' => [[31, 47, 00], [35, 13,0], 'Asia/Jerusalem'],
-	'State College' => [[40,47,29],[-77, -51, -31], 'America/New_York'],
-	'Vancouver, BC' => [[49,16,0], [-123,-7,0], 'America/Vancouver'],
+#	'London' => [[51, 34, 57], [0,-13,-28], 'Europe/London'], # Actually, Hendon Central
+#	'Jerusalem' => [[31, 47, 00], [35, 13,0], 'Asia/Jerusalem'],
+#	'State College' => [[40,47,29],[-77, -51, -31], 'America/New_York'],
+#	'Vancouver, BC' => [[49,16,0], [-123,-7,0], 'America/Vancouver'],
+	"Umea, Sweden"=>  [[63, 50, 0], [20,15, 0], "Europe/Stockholm"],
     );
 
 

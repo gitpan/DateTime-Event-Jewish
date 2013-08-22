@@ -1,8 +1,8 @@
-#!perl  -T
 
 =head1 NAME
 
 t001.t	- How to use this module
+#!perl  -T
 
 =head1 DESCRIPTION
 
@@ -18,7 +18,7 @@ use strict;
 use warnings;
 use Test::More tests => 30;
 use FindBin qw($Bin);
-use lib qw($Bin/../lib);
+use lib qq($Bin/../lib);
 
 use DateTime;
 use DateTime::Event::Jewish::Parshah qw(parshah);
@@ -31,3 +31,4 @@ for (my $year=5770; $year< 5800; $year++) {
 
     like($parshah, qr/Devarim/, "Tisha B'Av $year");
 }
+exit 0;

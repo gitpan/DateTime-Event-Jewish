@@ -32,6 +32,9 @@ sub utc_rd_values {
 +use DateTime::TimeZone::Floating qw( );
 +sub time_zone { DateTime::TimeZone::Floating->new() } 
 
+Version 0.05 should be OK.
+
+87009 22/8/2013  Error in calculating VaYakhel vs VaYakhel/Pekudei
 
 
 INSTALLATION

@@ -4,3 +4,7 @@ Revision history for DateTime-Event-Jewish
         First version, released on an unsuspecting world.
 
 0.03 Fixed DST correction.
+
+0.04 Corrected Param::Validate to Params::Validate
+
+0.05 Fixed bug in Vayakhel vs Vayahkhel/Pekudei

@@ -70,7 +70,7 @@ sub _initYomTov {
 Returns the next Shabbat which is strictly after $date. The
 returned object is a Hewbrew date.
 
-$date is some sort of Datetime object; it does not matter which.
+$date is some sort of DateTime object; it does not matter which.
 
 =cut
 
@@ -87,10 +87,13 @@ sub nextShabbat {
 Returns the parshah name or a yomtov name for the Shabbat
 strictly after $date.
 
-$date is some sort of Datetime object; it does not matter which.
+$date is some sort of DateTime object; it does not matter which.
 
 $israel is an optional flag to indicate that we should use the
 logic for Israel rather than the Diaspora.
+
+See http://individual.utoronto.ca/kalendis/hebrew/parshah.htm for
+the logic of this code.
 
 =cut
 
@@ -171,8 +174,10 @@ LOOP:
         $combined        = 0;
         $parshahNumber++;
         if($parshahNumber==22) {	#Vayakhel
+		# Combine Vayakhel/Pekudei if there are fewer than 4 
+		# Shabbatot *before* the first day of Pesach
 		my $pesachDays	= $pesach->{rd_days};
-		$combined =1 if( ($pesachDays - $workingDays) < 28);
+		$combined =1 if ($pesachDays - $workingDays < 22);
 		next LOOP;
             }
         if($parshahNumber ==27 ||       # Tazria

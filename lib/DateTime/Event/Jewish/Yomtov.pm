@@ -51,13 +51,16 @@ DateTime::Event::Jewish::Yomtov - list of festivals
 
 =head1 DESCRIPTION
 
-This module exports a list fo festival dates as an array of
+This module exports a list of festival dates as an array of
 arrayrefs. Each array element is of the form
-	[ name, dayOfMonth, monthNumber ]
+	[ name, dayOfMonth, monthNumber, diasporaFlag ]
 Bear in mind that Nissan is month 1 and Tishrei is month 7.
 
 Only festivals that affect leyning are listed, so Purim,
-chanukkah, 10 Tevet etc. are not in the list.
+Chanukkah, 10 Tevet etc. are not in the list.
+
+The diasporaFlag is non-zero for those festivals that apply
+only outside Israel.
 
 =head1 AUTHOR
 

@@ -7,6 +7,7 @@ use DateTime;
 use DateTime::Duration;
 use Math::Trig;
 use DateTime::Event::Jewish::Declination qw(declination %Declination);
+use DateTime::Event::Jewish::ZoneLocation;
 use DateTime::Event::Jewish::Eqt qw(eqt );
 our $VERSION = '0.01';
 
@@ -42,6 +43,8 @@ by default, we use 1 degree of depression this is more than adequate.
 
 The methods that return times actually return a DateTime
 object in the correct timezone as specified in the constructor. 
+If an evaluation fails, e.g. no sunrise inside the Arctic cirle,
+undef is returned.
 
 All times are corrected for the equation of time: the variation
 between sundial time and clock time.
@@ -72,7 +75,8 @@ longitudes are negative.
 
 =item $timeZone
 
-A time-zone name as stored in the time-zone database.
+A time-zone name as stored in the time-zone database, e.g.
+"Europe/London".
 
 =back
 
@@ -108,6 +112,11 @@ Only the day and month are relevant.
 The number of degrees below the tangent plane that the sun
 should be at halachic sunrise/set. Default 1.
 
+=item returns
+
+The length of the half-day in minutes. Returns 0 if there is no
+sensible answer, e.g. inside the Arctic circle in summer.
+
 =back
 
 =cut
@@ -126,7 +135,7 @@ sub halachicHalfDay {
 
     my $decl	= declination($date); # Radians
 
-    #Protect against stupidity
+    #Protect against stupidity - works for both summer and winter.
     return 0 if abs($phi)+ abs($decl) +abs(deg2rad($extra)) > pi/2.0;
 
     # Find the longitude difference between the base point and the sun
@@ -138,8 +147,7 @@ sub halachicHalfDay {
 
 =head3 localnoon($date)
 
-Returns a DateTime object of the UTC time of local noon. You will
-have to call set_time_zone on it to get your local time.
+Returns a DateTime object of the local time of local noon. 
 
 =over
 
@@ -163,8 +171,11 @@ sub localnoon {
     $date->set_hour(12);
     $date->set_minute(0);
     $date->set_second(0);
-    $date->set_time_zone($self->{zone});
-    return $date - DateTime::Duration->new(minutes=>eqt($date)+4*$long);
+    my $res	=  $date - DateTime::Duration->new(minutes=>eqt($date)+4*$long);
+    # We now have the correct time, but expressed in UTC
+    # So change the time-zone to what the user expects.
+    $res->set_time_zone($self->{zone});
+    return $res;
 }
 
 =head3 halfday($date, [$as])
@@ -179,6 +190,11 @@ i.e. the time when the sun is 90 degrees from the zenith.
 
 A DateTime object. Only the day and month are relevant.
 N.B. This is a Gregorian date.
+
+=item Returns
+
+The length of the ahlf day in minutes. Returns 0 if there is no
+sensible answer, e.g. inside the ARctic circle in summer.
 
 =back
 
@@ -216,6 +232,10 @@ corrected for your distance from the standard meridian.
 =item $date
 
 A DateTime object. Only the day and month are relevant.
+
+=item Returns
+
+A DateTime object.
 
 =back
 
