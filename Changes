@@ -8,3 +8,5 @@ Revision history for DateTime-Event-Jewish
 0.04 Corrected Param::Validate to Params::Validate
 
 0.05 Fixed bug in Vayakhel vs Vayahkhel/Pekudei
+
+0.06 Fixed pod-coverage moaning on a data file.

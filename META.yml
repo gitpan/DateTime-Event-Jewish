@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               DateTime-Event-Jewish
-version:            0.05
+version:            0.06
 abstract:           Claculate leyning and Shabbat times
 author:
     - Raphael Mankin <rapmankin@cpan.org>

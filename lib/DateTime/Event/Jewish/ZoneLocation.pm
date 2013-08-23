@@ -1,24 +1,47 @@
 package DateTime::Event::Jewish::ZoneLocation;
-# @(#)zone.tab	1.32
-#
-# TZ zone descriptions
-#
-# From Paul Eggert (1996-08-05):
-#
-# This file contains a table with the following columns:
-# 1.  ISO 3166 2-character country code.  See the file `iso3166.tab'.
-# 2.  Latitude and longitude of the zone's principal location
-#     in ISO 6709 sign-degrees-minutes-seconds format,
-#     either +-DDMM+-DDDMM or +-DDMMSS+-DDDMMSS,
-#     first latitude (+ is north), then longitude (+ is east).
-# 3.  Zone name used in value of TZ environment variable.
-# 4.  Comments; present if and only if the country has multiple rows.
-#
-# Columns are separated by a single tab.
-# The table is sorted first by country, then an order within the country that
-# (1) makes some geographical sense, and
-# (2) puts the most populous zones first, where that does not contradict (1).
-#
+
+=head1 NAME
+
+@(#)zone.tab	1.32 - TZ zone descriptions
+
+=head1 AUTHOR
+
+ From Paul Eggert (1996-08-05):
+
+=head1 DESCRIPTION
+
+This file contains a table with the following columns:
+
+=over
+
+=item *
+
+ISO 3166 2-character country code.  See the file `iso3166.tab'.
+
+=item *
+
+Latitude and longitude of the zone's principal location
+in ISO 6709 sign-degrees-minutes-seconds format,
+either +-DDMM+-DDDMM or +-DDMMSS+-DDDMMSS,
+first latitude (+ is north), then longitude (+ is east).
+
+=item *
+ 
+Zone name used in value of TZ environment variable.
+
+=item *
+
+Comments; present if and only if the country has multiple rows.
+
+=back
+
+Columns are separated by a single tab.
+The table is sorted first by country, then an order within the country that
+(1) makes some geographical sense, and
+ (2) puts the most populous zones first, where that does not contradict (1).
+
+=cut
+
 # Lines beginning with `#' are comments.
 #
 %zonelocation = (
