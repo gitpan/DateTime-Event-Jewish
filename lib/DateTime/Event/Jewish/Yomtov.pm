@@ -56,7 +56,7 @@ arrayrefs. Each array element is of the form
 	[ name, dayOfMonth, monthNumber, diasporaFlag ]
 Bear in mind that Nissan is month 1 and Tishrei is month 7.
 
-Only festivals that affect leyning are listed, so Purim,
+Only festivals that affect Shabbat leyning are listed, so Purim,
 Chanukkah, 10 Tevet etc. are not in the list.
 
 The diasporaFlag is non-zero for those festivals that apply

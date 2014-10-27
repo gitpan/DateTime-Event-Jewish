@@ -104,7 +104,7 @@ question and you will get a very silly answer.
 
 =item $date
 
-A DateTime object, either a Gregoorian or a Hebrew date.
+A DateTime object, either a Gregorian or a Hebrew date.
 Only the day and month are relevant.
 
 =item $extra
