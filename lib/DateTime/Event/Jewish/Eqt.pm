@@ -6,7 +6,7 @@ use DateTime::Duration;
 use base qw(Exporter);
 use vars qw(@EXPORT_OK);
 our $VERSION = '0.01';
-@EXPORT_OK = qw(eqt );
+@EXPORT_OK = qw(eqt %eqt);
 
 =head1 NAME
 

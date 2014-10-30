@@ -25,6 +25,8 @@ t/t002.t
 t/t003.t
 t/t004.t
 t/t005.t
+t/t006.t
+t/t007.t
 Torah_Portions.xls
 META.yml                                 Module YAML meta-data (added by MakeMaker)
 META.json                                Module JSON meta-data (added by MakeMaker)

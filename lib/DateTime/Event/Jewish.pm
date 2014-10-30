@@ -9,11 +9,11 @@ DateTime::Event::Jewish - Claculate leyning and Shabbat times
 
 =head1 VERSION
 
-Version 0.07
+Version 0.08
 
 =cut
 
-our $VERSION = '0.07';
+our $VERSION = '0.08';
 
 
 =head1 SYNOPSIS

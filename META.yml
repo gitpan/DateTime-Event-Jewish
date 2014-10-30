@@ -25,4 +25,4 @@ requires:
   Math::Trig: 0
   Params::Validate: 0
   Test::More: 0
-version: 0.07
+version: 0.08

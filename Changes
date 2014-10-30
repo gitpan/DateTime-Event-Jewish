@@ -13,3 +13,5 @@ Revision history for DateTime-Event-Jewish
  
 0.07 Corrected typo in Declinatiion.pm that caused calculations
     for 9 Feb to fail.
+
+0.08 Corrected more typos. Added a test to check for them.
